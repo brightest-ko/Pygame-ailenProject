@@ -9,4 +9,7 @@ class Settings():
         self.bg_color = (135,206,250)
         #http://najsulman.tistory.com/439
         #light gray(230,230,230)
+        
+        #우주선 설정.
+        self.ship_speed_factor = 1.5
     
