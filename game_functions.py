@@ -9,20 +9,10 @@ def check_event(ship):
         if event.type == pygame.QUIT:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
-                #우주선을 오른쪽으로 움직입니다.
-                #ship.rect.centerx += 1
-                ship.moving_right = True
-            if event.key == pygame.K_LEFT:
-                ship.moving_left = True
+            check_keydown_events(event,ship)
                 
         elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_RIGHT:
-                #우주선을 오른쪽으로 움직입니다.
-                #ship.rect.centerx += 1
-                ship.moving_right = False
-            if event.key == pygame.K_LEFT:
-                ship.moving_left = False
+            check_keyup_events(event,ship)
                 
 def update_screen( ai_settings , screen , ship ):
     #화면에 있는 이미지를 업데이트하고 새 화면에 그립니다.
@@ -33,3 +23,16 @@ def update_screen( ai_settings , screen , ship ):
     #가장 최근에 그린 화면을 표시합니다.
     pygame.display.flip()
     
+def check_keydown_events(event,ship):
+    #키를 누르는 이벤트에 응답합니다.
+    if event.key == pygame.K_RIGHT:
+        ship.moving_right = True
+    elif event.key == pygame.K_LEFT:
+        ship.moving_left = True
+        
+def check_keyup_events(event,ship):
+    #키를 손을 뗴 이벤트에 응답합니다.    
+    if event.key == pygame.K_RIGHT:
+        ship.moving_right = False
+    elif event.key == pygame.K_LEFT:
+        ship.moving_left = False
