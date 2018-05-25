@@ -7,7 +7,7 @@ class Ship():
         self.screen = screen
         
         #우주선 이미지를 불러오고 이미지의 rect객체를 설정합니다.
-        self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load('images/ship2.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         

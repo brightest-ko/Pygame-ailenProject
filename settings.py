@@ -6,6 +6,7 @@ class Settings():
         #화면설정 
         self.screen_width = 1200
         self.screen_height = 500 #800
-        self.bg_color = (230,230,230)
-        #light gray
+        self.bg_color = (135,206,250)
+        #http://najsulman.tistory.com/439
+        #light gray(230,230,230)
     
