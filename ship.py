@@ -25,9 +25,9 @@ class Ship():
     
     def update(self):
         #이동 플래그에 따라 위치를 업데이트합니다.
-        if self.moving_right:
+        if self.moving_right and self.rect.right < self.screen_rect.right:
             self.rect.centerx += self.ai_settings.ship_speed_factor
-        if self.moving_left:
+        if self.moving_left and self.rect.left > 0:
             self.rect.centerx -= self.ai_settings.ship_speed_factor
             
         #rect 객체를 self.center에 따라 업데이트합니다.
