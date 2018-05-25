@@ -16,14 +16,6 @@ def run_game():
     # Start the main loop for the game
     while True:
         gf.check_event()
-        '''
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-        '''
-        #루프를 실행할 때마다 화면을 다시 그립니다.
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
-        pygame.display.flip()
+        gf.update_screen(ai_settings, screen, ship)
         
 run_game()
